@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraControler.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\Test.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\TextBoxSystem.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
