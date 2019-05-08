@@ -19,8 +19,12 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadOptionsScene()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Options Scene");
     }
+
+    public void LoadGameOverScene()
+    {
+        SceneManager.LoadScene("Game Over");    }
 
     public void ExitGame()
     {
