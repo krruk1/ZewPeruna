@@ -46,7 +46,8 @@ public class TextArchitect{
         string[] speechAndTags = useEncapsulation ? TagManager.SplitByTags(targetText) : new string[1]{targetText};
 
         _currentText = preText;
-        string curText = "";
+//Unnecessary with TMPro. 
+//       string curText = "";
 
         for (int a = 0; a <speechAndTags.Length; a++) {
             string section = speechAndTags[a];
@@ -54,23 +55,28 @@ public class TextArchitect{
             bool isATag = (a & 1) != 0;
 
             if (isATag && useEncapsulation) {
-                curText = _currentText;
-                ENCAPSULATED_TEXT encapsulation = new ENCAPSULATED_TEXT(string.Format("<{0}>", section), speechAndTags, a);
-                while (!encapsulation.isDone) {
-                    bool stepped = encapsulation.Step();
+                //Unnecessary with TMPro.
+                /*               curText = _currentText;
+                               ENCAPSULATED_TEXT encapsulation = new ENCAPSULATED_TEXT(string.Format("<{0}>", section), speechAndTags, a);
+                               while (!encapsulation.isDone) {
+                                   bool stepped = encapsulation.Step();
 
-                    _currentText = curText + encapsulation.displayText;
+                                   _currentText = curText + encapsulation.displayText;
 
-                    if (stepped) {
-                        runsThisFrame++;
-                        int maxRunsPerFrame = skip ? 5 : charactersPerFrame;
-                        if (runsThisFrame == maxRunsPerFrame) {
-                            runsThisFrame = 0;
-                            yield return new WaitForSeconds(skip ? 0.01f : 0.01f * speed);
-                        }
-                    }
-                }
-                a = encapsulation.speechAndTagsArrayProgress + 1;
+                                   if (stepped) {
+                                       runsThisFrame++;
+                                       int maxRunsPerFrame = skip ? 5 : charactersPerFrame;
+                                       if (runsThisFrame == maxRunsPerFrame) {
+                                           runsThisFrame = 0;
+                                           yield return new WaitForSeconds(skip ? 0.01f : 0.01f * speed);
+                                       }
+                                   }
+                               }
+                               a = encapsulation.speechAndTagsArrayProgress + 1;
+               */
+                string tag = string.Format("<{0}>", section);
+                _currentText += tag;
+                yield return new WaitForEndOfFrame();
             }
             else {
                 for (int i = 0; i <section.Length; i++) {

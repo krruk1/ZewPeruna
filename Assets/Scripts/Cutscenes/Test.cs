@@ -13,23 +13,24 @@ public class Test : MonoBehaviour
     }
 
     public string[] s = new string[]{
-        "Zawżdy była to ",
-        "nie najlepsza noc.\n",
-        "Doprawydż nie wiem, ",
-        "jak to elegancko przetestować. ",
-        "A jest już późno... A to dopiero początek \"zabawy\" heh.\n",
-        "Teraz tylko pozostaje nie zasnąć...\n",
-        "Nie myśleć o spannn...\n",
+        "Zawzdy byla to ",
+        "<b>nie najlepsza</b> noc.\n",
+        "Doprawydz nie wiem, ",
+        "jak to <i>elegancko</i> przetestowac. ",
+        "A jest juz pozno... A to dopiero poczatek <size=18><b>\"zabawy\"</b></size> heh.\n",
+        "Teraz tylko pozostaje nie <color=red><size=30>zasnac</size></color>...\n",
+        "Nie myslec o spannn...\n",
         "Z\n Z\n  Z\n   Z\n    Z\n     Z\n      Z\n       Z\n        Z\n         Z" +
         "\n          Z\n           Z\n            Z\n             Z\n              Z\n..."
     };
+    public string dd = "Nie mam pomyslu jak dobrze ogarnac to <color=red><b>sciernisko</b></color>, ale kiedys bedzie to <color=green><b>San Francisco</b></color>.";
     int indx = 0;
     // Update is called once per frame
     void Update(){
         if (Input.GetKeyDown(KeyCode.Mouse0)) {
             if (!dialogue.isSpeaking || dialogue.isWaitingForUserInput) {
                 if (indx >= s.Length) {
-                    dialogue.Say("Nie mam pomysłu jak dobrze ogarnąć to ściernisko, ale kiedyś będzie to San Francisco.");
+                    dialogue.Say(dd);
                     return;
                 }
                 dialogue.SayAdd(s[indx]);
