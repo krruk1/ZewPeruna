@@ -143,25 +143,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s:
-  - 'Zawzdy byla to '
+  - "Zaw\u017Cdy by\u0142a to "
   - '<b>nie najlepsza</b> noc.
 
 '
-  - 'Doprawydz nie wiem, '
-  - 'jak to <i>elegancko</i> przetestowac. '
-  - 'A jest juz pozno... A to dopiero poczatek <size=18><b>"zabawy"</b></size> heh.
-
-'
-  - 'Teraz tylko pozostaje nie <color=red><size=30>zasnac</size></color>...
-
-'
-  - 'Nie myslec o spannn...
-
-'
+  - "Doprawyd\u017C nie wiem, "
+  - "jak to <i>elegancko</i> przetestowa\u0107. "
+  - "A jest ju\u017C p\xF3\u017Ano... A to dopiero pocz\u0105tek \"zabawy\" heh.\n"
+  - "Teraz tylko pozostaje nie <size=20><color=red>zasn\u0105\u0107</color></size>...\n"
+  - "Nie my\u015Ble\u0107 o spannn...\n"
   - "Z\n Z\n  Z\n   Z\n    Z\n     Z\n      Z\n       Z\n        Z\n         Z\n          Z\n
     \          Z\n            Z\n             Z\n              Z\n..."
-  dd: Nie mam pomyslu jak dobrze ogarnac to <color=red><b>sciernisko</b></color>,
-    ale kiedys bedzie to <color=green><b>San Francisco</b></color>.
 --- !u!114 &337845688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +376,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859057390}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -847,7 +839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1692413333
 RectTransform:
   m_ObjectHideFlags: 0
