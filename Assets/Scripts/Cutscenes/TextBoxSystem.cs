@@ -1,7 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class TextBoxSystem : MonoBehaviour
 {
@@ -67,8 +66,8 @@ public class TextBoxSystem : MonoBehaviour
     [System.Serializable]
     public class ELEMENTS {
         public GameObject textPanel;
-        public Text speechText;
+        public TextMeshProUGUI speechText;
     }
     public GameObject textPanel { get { return elements.textPanel; } }
-    public Text speechText { get { return elements.speechText;  } }
+    public TextMeshProUGUI speechText { get { return elements.speechText;  } }
 }
