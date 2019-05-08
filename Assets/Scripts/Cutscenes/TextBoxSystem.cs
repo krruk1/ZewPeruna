@@ -12,11 +12,6 @@ public class TextBoxSystem : MonoBehaviour
         instance = this;
     }
 
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-
     public void Say(string speech) {
         StopSpeaking();
         speaking = StartCoroutine(Speaking(speech, false));
@@ -24,13 +19,18 @@ public class TextBoxSystem : MonoBehaviour
 
     public void SayAdd(string speech) {
         StopSpeaking();
+
         speechText.text = targetSpeech;
+
         speaking = StartCoroutine(Speaking(speech, true));
     }
 
     public void StopSpeaking() {
         if (isSpeaking) {
             StopCoroutine(speaking);
+        }
+        if (textArchitect != null && textArchitect.isConstructiong) {
+            textArchitect.Stop();
         }
         speaking = null;
     }
@@ -40,20 +40,27 @@ public class TextBoxSystem : MonoBehaviour
 
     string targetSpeech = "";
     Coroutine speaking = null;
+    TextArchitect textArchitect = null;
     IEnumerator Speaking(string speech, bool additive) {
         textPanel.SetActive(true);
-        targetSpeech = speech;
-        if (!additive)
-            speechText.text = "";
-        else
-            targetSpeech = speechText.text + targetSpeech;
+
+        string additiveSpeech = additive ? speechText.text : "";
+        targetSpeech = additiveSpeech + speech;
+
+        textArchitect = new TextArchitect(speech, additiveSpeech);
+
         isWaitingForUserInput = false;
 
-        while(speechText.text != targetSpeech) {
-            speechText.text += targetSpeech[speechText.text.Length];
+        while(textArchitect.isConstructiong) {
+            if (Input.GetKey(KeyCode.Mouse0))
+                textArchitect.skip = true;
+
+            speechText.text = textArchitect.currentText;
+
             yield return new WaitForEndOfFrame();
         }
 
+        speechText.text = textArchitect.currentText;
         //text finished
         isWaitingForUserInput = true;
 

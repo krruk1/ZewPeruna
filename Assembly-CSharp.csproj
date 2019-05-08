@@ -65,6 +65,8 @@
     <Compile Include="Assets\Scripts\BuildManager.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CameraControler.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\architectTesting.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\TagManager.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\Test.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\TextArchitect.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\TextBoxSystem.cs" />
