@@ -1,50 +1,53 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class WavesSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
-    public Transform spawnPoint;
-
-    public float TimeBeetweneWaves = 5f;
-    public float countdown = 1f;
-    public int waveIndex = 0;
-
-    public Text waveCountDownText;
-    // Update is called once per frame
-    void Update()
+    [SerializeField] TextMeshProUGUI timerToNextWave;
+    [SerializeField] List<WaveConfig> wavesconfig;
+    [SerializeField] bool looping;
+    int startingWaveIndex = 0;
+    // Start is called before the first frame update
+    IEnumerator Start()
     {
-
-        if (countdown <= 0f)
+        do
         {
-            StartCoroutine(SpawnWave());
-            countdown = TimeBeetweneWaves;
-        
-        }
-
-        countdown -= Time.deltaTime;
-        waveCountDownText.text = Mathf.Round(countdown).ToString();
+            yield return StartCoroutine(SpawnAllWaves());
+        } while (looping);
 
     }
 
-    IEnumerator SpawnWave()
+    private IEnumerator SpawnAllWaves()
     {
-        waveIndex++;
-
-        for (int i = 0; i < waveIndex; i++)
+        for (int waveIndex = startingWaveIndex; waveIndex < wavesconfig.Count; waveIndex++)
         {
-            SpawnEnemy();
-            yield return new WaitForSeconds(0.4f);
+            Debug.Log(wavesconfig.Count);
+            var currentWave = wavesconfig[waveIndex];
+            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
         }
-        
 
     }
 
-    void SpawnEnemy()
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
     {
-        Instantiate(enemyPrefab , spawnPoint.position , spawnPoint.rotation);
+        for (int enemyCount = 0; enemyCount < waveConfig.GetNumberOfEnemies(); enemyCount++)
+        {
+            var newEnemy = Instantiate(waveConfig.GetEnemyPrefab(), waveConfig.GetWaypoints()[0].transform.position, Quaternion.identity);
+
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
+
+            yield return new WaitForSeconds(waveConfig.GetTimeBeteewneSpawns());
+        }
+        for (float i = waveConfig.GetTimeToNextWave() ; i >= 0 ; i--)
+        {
+            timerToNextWave.text = i.ToString();
+            yield return new WaitForSeconds(1);
+        }
+
+        timerToNextWave.text = " ";
 
     }
 }
