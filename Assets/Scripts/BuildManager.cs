@@ -6,7 +6,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
-    private GameObject turretToBuild;
+    private TurretBluepriont turretToBuild;
 
     private void Awake()
     {
@@ -14,14 +14,25 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject standardTurretPrefab;
+    public GameObject cannonPrefab;
 
-    private void Start()
+    public bool CanBuild { get { return turretToBuild != null; } }
+
+    public void SelectTurretToBuild(TurretBluepriont turret)
     {
-        turretToBuild = standardTurretPrefab;
+        turretToBuild = turret;
     }
-
-    public GameObject GetTurretToBuild()
+    public void BuildTurretOn(Node node)
     {
-        return turretToBuild;
+        if(PlayerStats.money < turretToBuild.cost)
+        {
+            Debug.Log("moło hajsu");
+            return;
+        }
+
+        PlayerStats.money -= turretToBuild.cost;
+
+        GameObject turret = (GameObject) Instantiate(turretToBuild.prefab, node.GetBuildPosition() , Quaternion.identity);
+        node.turret = turret;
     }
 }

@@ -42,6 +42,7 @@ public class EnemyPathing : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            PlayerStats.lifes -= 1;
         }
     }
 }

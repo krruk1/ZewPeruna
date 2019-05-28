@@ -104,5 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c53512100da4b847a15da6402d21658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0.3301887, b: 0.03647431, a: 0}
+  possitiveColor: {r: 0.045438685, g: 0.46226418, b: 0, a: 0}
+  negativeColor: {r: 0.7830189, g: 0, b: 0, a: 0}
   positionOffset: {x: 0, y: 0.5, z: 0}
