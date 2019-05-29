@@ -60,6 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Imports\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Music\DontDestroyAudio.cs" />
     <Compile Include="Assets\Music\Music.cs" />
     <Compile Include="Assets\Music\SetVolume.cs" />
@@ -121,6 +129,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Imports\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Imports\ARISAN\100 Alchemy item icons-free\item_name.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Imports\AurynSky\Rockets Missiles and Bombs\READ ME.txt" />

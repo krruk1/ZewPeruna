@@ -21,8 +21,8 @@ public class PlayerStats : MonoBehaviour
 
     private void Update()
     {
-        moneyText.text = money.ToString();
-        lifesText.text = lifes.ToString();
+        moneyText.text = money.ToString() + "$";
+        lifesText.text = lifes.ToString() + " hp";
         if(lifes <= 0 )
         {
             sceneLoader.LoadGameOverScene();

@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] int hp = 100;
+
     [SerializeField] int moneyAward;
-    private void OnDestroy()
+
+    public void Hit(int damage)
     {
-        PlayerStats.money += moneyAward;
+        hp -= damage;
+        if (hp <= 0)
+        {
+            PlayerStats.money += moneyAward;
+            Destroy(gameObject);
+            
+        }
     }
 }

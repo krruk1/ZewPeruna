@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         float distanceThisFrame = Time.deltaTime * speed;
 
         if( dir.magnitude <= distanceThisFrame)
@@ -53,7 +53,7 @@ public class Bullet : MonoBehaviour
 
     public void Damage(Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        enemy.GetComponent<Enemy>().Hit(50);
     }
 
     public void Explode()
