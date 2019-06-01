@@ -5,16 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadNextScene()
-    {
-        int CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(CurrentSceneIndex + 1);
-
-    }
-
     public void LoadStartScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene("lvl 1");
     }
 
     public void LoadOptionsScene()
@@ -24,7 +22,8 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadGameOverScene()
     {
-        SceneManager.LoadScene("Game Over");    }
+        SceneManager.LoadScene("Game Over");
+    }
 
     public void ExitGame()
     {
