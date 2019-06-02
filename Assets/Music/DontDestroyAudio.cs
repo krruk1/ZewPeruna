@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class DontDestroyAudio : MonoBehaviour
 {
 
-    public void Awake()
+    void Awake()
     {
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
         if (FindObjectsOfType(GetType()).Length > 1)
         {
@@ -16,4 +17,12 @@ public class DontDestroyAudio : MonoBehaviour
         }
     }
 
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "lvl 1")
+        {
+            Destroy(gameObject);
+            Debug.Log("I am inside the if statement");
+        }
+    }
 }
