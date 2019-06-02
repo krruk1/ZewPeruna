@@ -75,8 +75,7 @@
     <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Imports\EffectExamples\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Imports\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Music\AudioManager.cs" />
-    <Compile Include="Assets\Music\AudioTesting.cs" />
+    <Compile Include="Assets\Music\ButtonSoundEffect.cs" />
     <Compile Include="Assets\Music\DontDestroyAudio.cs" />
     <Compile Include="Assets\Music\Music.cs" />
     <Compile Include="Assets\Music\SetVolume.cs" />
@@ -165,6 +164,12 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <Reference Include="Unity.ProGrids">
+      <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -174,20 +179,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids">
-      <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
       <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/Studia/ZewPeruna/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/2018.3.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

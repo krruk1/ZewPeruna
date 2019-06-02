@@ -8,16 +8,6 @@ public class MusicMute : MonoBehaviour
 
     public void ToggleSound()
     {
-        if (PlayerPrefs.GetInt("Muted", 0) == 0)
-        {
-            PlayerPrefs.SetInt("Muted", 1);
-            //AudioListener.volume = 1;
-        }
-        else
-        {
-            PlayerPrefs.SetInt("Muted", 0);
-            //AudioListener.volume = 0;
-        }
-
+        AudioListener.pause = !AudioListener.pause;
     }
 }
