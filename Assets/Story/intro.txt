@@ -1,0 +1,11 @@
+"Zawżdy była to "PlaySong(Main Menu Music)
++"<b>nie najlepsza</b> noc.\n"
++"Doprawydż nie wiem, "PlaySFX(NewGameSound)
++"jak to <i>elegancko</i> przetestować. "
++"A jest juz późno... A to dopiero początek <size=18><b>\"zabawy\"</b></size> heh.\n"
++"Teraz tylko pozostaje nie <color=red><size=30>zasnac</size></color>...\n"
+"Nie myslec o spannn...\n"PlaySong(Level Music),PlaySFX(MissionCompleted)
++"Z\n Z\n  Z\n   Z\n    Z\n     Z\n      Z\n       Z\n        Z\n         Z"
++"\n          Z\n           Z\n            Z\n             Z\n              Z\n..."
+"zażółć gęślą jaźń."
++"ŻAŻÓŁĆ GĘŚLĄ JAŹŃ."

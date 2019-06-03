@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802834, g: 0.2257135, b: 0.3069223, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,29 +139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 337845686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ef65c08759adaf4ca5a377ec3ef4252, type: 3}
+  m_Script: {fileID: 11500000, guid: a0dd3315bac896349bd68518ff17aee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  s:
-  - 'Zawzdy byla to '
-  - '<b>nie najlepsza</b> noc.
-
-'
-  - 'Doprawydz nie wiem, '
-  - 'jak to <i>elegancko</i> przetestowac. '
-  - 'A jest juz pozno... A to dopiero poczatek <size=18><b>"zabawy"</b></size> heh.
-
-'
-  - 'Teraz tylko pozostaje nie <color=red><size=30>zasnac</size></color>...
-
-'
-  - 'Nie myslec o spannn...
-
-'
-  - "Z\n Z\n  Z\n   Z\n    Z\n     Z\n      Z\n       Z\n        Z\n         Z\n          Z\n
-    \          Z\n            Z\n             Z\n              Z\n..."
-  dd: Nie mam pomyslu jak dobrze ogarnac to <color=red><b>sciernisko</b></color>,
-    ale kiedys bedzie to <color=green><b>San Francisco</b></color>.
 --- !u!114 &337845688
 MonoBehaviour:
   m_ObjectHideFlags: 0
