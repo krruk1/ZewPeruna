@@ -24,5 +24,11 @@ public class DontDestroyAudio : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("I am inside the if statement");
         }
+
+        if (scene.name == "lvl Dziuk")
+        {
+            Destroy(gameObject);
+            Debug.Log("I am inside the if statement");
+        }
     }
 }
