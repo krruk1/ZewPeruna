@@ -20,6 +20,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Options Scene");
     }
 
+    public void LoadNext()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+    }
+
     public void LoadGameOverScene()
     {
         SceneManager.LoadScene("Game Over");

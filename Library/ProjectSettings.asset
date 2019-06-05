@@ -697,7 +697,7 @@ PlayerSettings:
   apiCompatibilityLevel: 2
   cloudProjectId: 08093624-0571-4b1a-9357-396e22965067
   framebufferDepthMemorylessMode: 0
-  projectName: EffectsExamples
+  projectName: Tower Defence
   organizationId: jakubtomal
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
