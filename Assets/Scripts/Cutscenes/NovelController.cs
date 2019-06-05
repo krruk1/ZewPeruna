@@ -7,10 +7,11 @@ public class NovelController : MonoBehaviour
     TextBoxSystem textBox;
     List<string> data = new List<string>();
     int progress = 0;
+    public string chapter;
     // Start is called before the first frame update
     void Start()
     {
-        LoadChapterFile("intro");
+        LoadChapterFile(chapter);
         textBox = TextBoxSystem.instance;
     }
 
